@@ -50,7 +50,7 @@ public class Main {
     //Gets the Question from Questions Class with randomNumber Method
     public static void createQuestions(){
         Questions q = new Questions();
-        randNum = randomNumber();
+        int randNum = randomNumber();
         if(randNum == 1){
             System.out.println(q.question1);
         }else if( randNum == 2){
