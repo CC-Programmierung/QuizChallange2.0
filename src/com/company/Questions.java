@@ -6,11 +6,11 @@ public class Questions {
      * toDO:
      * Frage erstellen
      * Fragen dürfen nur einmal Angezeigt werden - heißt das doppelte Anfragen erstellen als gespielt wird
-     * Mehrer Anwort möglichkeiten
+     * Mehrere Antwort möglichkeiten
      * Punkte pro richtige Frage || Punkt abzug für falsche ? - oder Game over ?
      * Highscore
      * Zeitlimit ? - wenn ja.....weniger Punkte je abgelaufener Zeit
-     * Wenn frage beanwortet eine Runde weiter für schleife
+     * Wenn frage beantwortet eine Runde weiter für schleife
      * 50/50 Joker?
      */
 
@@ -20,8 +20,7 @@ public class Questions {
 
         public Questions() {
 
-            //for schleife die chekt ob die die RandomZahl schonmal dran war
-            //alldering muß das in der Game Klasse implentiert werden
+            // 10 out of 30 Questions. Answere not Implemented yet
             question1 = "In welchem Jahr ist die Titanic am 15. April auf ihrer Jungfernfahrt von Southampton im Atlantik gesunken?";
 
             question2 = "Wie heißt das größte Technologieunternehmen in Südkorea?";

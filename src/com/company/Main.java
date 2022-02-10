@@ -12,21 +12,19 @@ public class Main {
     static Random rand = new Random();
     private static int randNum;
 
-
-
+    //Starts the Programm through Main
     public static void main(String[] args) throws IOException {
         int round = 0;
         do {
             System.out.println("Press Enter....");
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             String user = br.readLine();
-
-            //randomNumber();
             createQuestions();
+
         }while (round != 10);
     }
 
-
+    //Checks if Number are rolled twice in a row ---> next ONLY one Number per Round
     public static int randomNumber(){
         boolean isRepeated;
         randNum = rand.nextInt(10) + 1;
@@ -37,24 +35,19 @@ public class Main {
             secondLastIndex = randomNumbers.get(randomNumbers.size() - 2);
         }catch (IndexOutOfBoundsException ex){}
 
-        //System.out.println("Vorletzte gewürfelte Zahl: " + secondLastIndex);
-        //System.out.println("Die gezogene Zahl ist: " + randNum);
-
         do{
             if(randNum == secondLastIndex){
                 isRepeated = true;
                 nRandNum = rand.nextInt(10) + 1;
                 randNum = nRandNum;
-                //System.out.println("Zahl ist Doppelt");
-                //(System.out.println("Die neu gewürfelte Zahl ist: " + randNum);
             }else{
-                //System.out.println("Zahl ist NICHT Doppelt");
                 break;
             }
         }while (isRepeated);
         return  randNum;
     }
 
+    //Gets the Question from Questions Class with randomNumber Method
     public static void createQuestions(){
         Questions q = new Questions();
         randNum = randomNumber();
